@@ -9,7 +9,7 @@ class heroContent extends HTMLElement {
     this.innerHTML = `
     <picture>
       <source srcset="images/hero-image_2-small.jpg" type="image/jpeg">
-      <img src="images/hero-image_2-large.jpg" alt="Restaurant" class="heroImage" width="100%" height="auto"/>
+      <img src="images/hero-image_2-small.jpg" alt="Restaurant" class="heroImage" width="100%" height="auto"/>
     </picture>
     <div class="hero-text">
       <h1>Welcome to Our Restaurant Catalog</h1>

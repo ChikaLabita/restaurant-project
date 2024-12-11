@@ -157,7 +157,8 @@ article {
   margin: 0px 160px;
 }
 .restaurant {
-  padding: 18px;
+  padding: 24px;
+  margin-bottom: 8px;
   border-radius: 12px;
   box-shadow: 2px 7px 13px 0px rgba(73, 73, 73, 0.2);
   overflow: hidden;
@@ -170,7 +171,7 @@ article {
   }
   a {
     text-decoration: none;
-    color: #6e0000;
+    color: #fdfdfd;
     margin-bottom: 8px;
     min-width: 44px;
     min-height: 44px;
@@ -181,16 +182,8 @@ article {
     font-size: 24px;
     color: #6e0000;
   }
-  a.more-detail {
-    background-color: #c43f3f;
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-    min-width: 44px;
-    min-height: 44px;
-    padding: 14px;
-    border-radius: 8px;
-    transition: color 0.3s ease-in-out;
+  .more-detail {
+    background-color: #6e0000;
   }
   .restoCity {
     font-size: 18px;

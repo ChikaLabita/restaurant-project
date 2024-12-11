@@ -7,6 +7,12 @@ const DrawerInitiator = {
     content.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
     });
+
+    const closeButton = document.querySelector('#close-button');
+    closeButton.addEventListener('click', (event) => {
+      this._closeDrawer(event, drawer);
+    });
+
   },
 
   _toggleDrawer(event, drawer) {
@@ -24,11 +30,11 @@ const DrawerInitiator = {
   },
 
   showSidebar(drawer) {
-    drawer.style.display = 'flex'; // Show the sidebar
+    drawer.style.display = 'flex';
   },
 
   hideSidebar(drawer) {
-    drawer.style.display = 'none'; // Hide the sidebar
+    drawer.style.display = 'none';
   },
 };
 

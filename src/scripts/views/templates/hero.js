@@ -8,7 +8,7 @@ class heroContent extends HTMLElement {
   render() {
     this.innerHTML = `
           <img class="lazyload heroImage"
-          src="images/hero-image_2-large.jpg"
+          src="images/hero-image_2-small.jpg"
           alt="Restaurant" width="100%" height="auto"
            loading="eager" />
         <div class="hero-text">

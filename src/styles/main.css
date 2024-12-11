@@ -158,16 +158,24 @@ article {
 }
 .restaurant {
   padding: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   border-radius: 12px;
   box-shadow: 2px 7px 13px 0px rgba(73, 73, 73, 0.2);
   overflow: hidden;
   width:  100%;
   justify-content: center;
+  &:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
   img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
   a {
     text-decoration: none;
@@ -184,11 +192,18 @@ article {
   }
   .more-detail {
     background-color: #6e0000;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #575757;
+    }
   }
   .restoCity {
     font-size: 18px;
     color: #575757;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
   .restoDescript {
     text-align: justify;
@@ -346,6 +361,7 @@ footer {
     grid-template-columns: 1fr;
   }
   #img img {
+    width: 100%;
     margin: 0 auto;
     display: block;
   }

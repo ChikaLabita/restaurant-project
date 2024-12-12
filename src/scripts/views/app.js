@@ -27,6 +27,15 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const skipLink = document.querySelector('.skiptomain');
+    const mainContent = document.querySelector('#maincontent');
+    skipLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      mainContent.scrollIntoView({ behavior : 'smooth' });
+      mainContent.focus();
+      skipLink.blur();
+    });
   }
 }
 

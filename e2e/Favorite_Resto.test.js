@@ -11,12 +11,11 @@ Scenario('Checking a restaurant favorite is empty', async ({I}) => {
 
 Scenario('Liking a restaurant', async ({ I }) => {
   I.amOnPage('/');
-  I.waitForElement('#resto-item', 2);
+  I.waitForElement('#resto-item', 5);
   I.seeElement('#resto-item');
   I.click('.more-detail');
   I.seeElement('#likeButton');
   I.click('#likeButton');
-
   const currentUrl = await I.grabCurrentUrl();
   const match = currentUrl.match(/detail\/(\w+)/);
   if (match) {
@@ -24,17 +23,18 @@ Scenario('Liking a restaurant', async ({ I }) => {
   } else {
     throw new Error('Restaurant ID could not be extracted from the URL');
   }
-
   I.amOnPage('/#/favorite');
-  I.seeElement('#restaurants');
+  I.seeElement('.restaurant');
 });
 
 Scenario('Unliking a restaurant', async ({ I }) => {
   I.amOnPage(`/#/detail/${restaurantId}`);
-  I.waitForElement('#likeButton', 2);
+  I.waitForElement('#likeButton', 5);
   I.seeElement('#likeButton');
   I.click('#likeButton');
   I.click('[aria-label="unlike this restaurant"]');
+  I.amOnPage('/#/favorite');
+  I.dontSee('.restaurant');
 });
 
 
